@@ -122,9 +122,73 @@ def factorial(n):
 
 factorial(5)
 
+##Exercise 2 (Binomial function)
+from numpy.random import uniform
+def binomial(n, p):
+    count = 0
+    for i in range(n):
+        v = uniform()
+        if v<p:
+            count = count + 1
+    return count
+
+binomial(10, 0.4)
+
+
+##Exercise 4 ( )
+from numpy.random import uniform
+
+pay = 0
+cnt = 0
+
+for i in range (10):
+    x = uniform()
+    if x < 0.5:
+        cnt = cnt+1
+    else:
+        cnt = 0
+    
+    if cnt == 3:
+        pay = pay +1
+
+print(pay)
+
+
+## Exexcise 5 
+a = 0.9
+length = 200
+current_x = 0
+
+x_values = []
+for i in range(length+1):
+    x_values.append(current_x)
+    current_x = a*current_x + np.random.randn()
+
+plt.plot(x_values)
+plt.show()
+
+    
+## legand
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = [np.random.randn() for i in range(100)]
+plt.plot(x, label="white noise")
+plt.legend()
+plt.show()
 
 
 
+## legand with 3 values
+a_s = [0.0, 0.8, 0.98]
+length = 200
 
-
-
+for a in a_s:
+    x_values = []
+    current_x = 0
+    for i in range(length):
+        x_values.append(current_x)
+        current_x = a*current_x + np.random.randn()
+    plt.plot(x_values, label= 'a = {a}')
+plt.legand()
+plt.show()
