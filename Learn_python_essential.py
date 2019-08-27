@@ -85,10 +85,22 @@ def func(String):
 
 func('Sajal DebNath') # ans =3 
 
+def func(seq_a, seq_b):
+    is_subset = True
+    for a in seq_a:
+        if a not in seq_b:
+            is_subset = False
+    return is_subset
+
+# == test == #
+
+print(func ([1, 2], [1, 2, 3]) )
+print(func ([1, 2, 3], [1, 2]) )
 
 
 
+def func(seq_a, seq_b):
+    return set(seq_a).issubset(set(seq_b))
 
-
-
-
+print(func ([1, 2], [1, 2, 3]) )
+print(func ([1, 2, 3], [1, 2]) )
