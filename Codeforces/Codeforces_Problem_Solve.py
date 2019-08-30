@@ -25,7 +25,12 @@ print(-m/a)
 print(-5/2)  # making ceil 
 
     
-print(block*block1)
-
 n,m,a=map(int,raw_input().split())
-print-n/a*(-m/a)
+print( -n//a * (-m//a) )
+
+
+### 71A
+for _ in range(int(input())):
+    s = input()
+    print s[0]+str(len(s)-2)+s[-1] if len(s)>10 else s
+
