@@ -30,7 +30,21 @@ print( -n//a * (-m//a) )
 
 
 ### 71A
-for _ in range(int(input())):
-    s = input()
+for i in range(int(input())):
+    s = raw_input()
     print s[0]+str(len(s)-2)+s[-1] if len(s)>10 else s
 
+
+
+###231A
+n = int(input())
+#print n
+cnt = 0
+for i in range(n): 
+    x,y,z = map(int, raw_input().split())
+    w = x+y+z
+    if w>=2:
+        cnt += 1
+print(cnt)
+
+    
